@@ -5,57 +5,57 @@ from tkinter import messagebox, filedialog
  
 def Widgets(): 
 	link_label = Label(root, 
-					text="YouTube link :", 
-					bg="red") 
+			text="YouTube link :", 
+			bg="red") 
 	link_label.grid(row=1, 
-					column=0, 
-					pady=5, 
-					padx=5) 
+			column=0, 
+			pady=5, 
+			padx=5) 
 
 	root.linkText = Entry(root, 
-						width=55, 
-						textvariable=video_Link) 
+			width=55, 
+			textvariable=video_Link) 
 	root.linkText.grid(row=1, 
-					column=1, 
-					pady=5, 
-					padx=5, 
-					columnspan = 2) 
+			column=1, 
+			pady=5, 
+			padx=5, 
+			columnspan = 2) 
 
 	destination_label = Label(root, 
-							text="Destination :", 
-							bg="red") 
+			text="Destination :", 
+			bg="red") 
 	destination_label.grid(row=2, 
-						column=0, 
-						pady=5, 
-						padx=5) 
+			column=0, 
+			pady=5, 
+			padx=5) 
 
 	root.destinationText = Entry(root, 
-								width=40, 
-								textvariable=download_Path) 
+			width=40, 
+			textvariable=download_Path) 
 	root.destinationText.grid(row=2, 
-							column=1, 
-							pady=5, 
-							padx=5) 
+			column=1, 
+			pady=5, 
+			padx=5) 
 
 	browse_B = Button(root, 
-					text="Browse", 
-					command=Browse, 
-					width=10, 
-					bg="#05E8E0") 
+			text="Browse", 
+			command=Browse, 
+			width=10, 
+			bg="#05E8E0") 
 	browse_B.grid(row=2, 
-				column=2, 
-				pady=1, 
-				padx=1) 
+			column=2, 
+			pady=1, 
+			padx=1) 
 
 	Download_B = Button(root, 
-						text="Download", 
-						command=Download, 
-						width=20, 
-						bg="#05E8E0") 
+			text="Download", 
+			command=Download, 
+			width=20, 
+			bg="#05E8E0") 
 	Download_B.grid(row=3, 
-					column=1, 
-					pady=1, 
-					padx=1) 
+			column=1, 
+			pady=1, 
+			padx=1) 
 
 
 
@@ -74,8 +74,7 @@ def Download():
 	videoStream.download(download_Folder) 
 
 	messagebox.showinfo("SUCCESSFUL!", 
-						"DOWNLOAADED & SAVED IN\n"
-						+ download_Folder) 
+			"DOWNLOADED & SAVED IN\n" + download_Folder) 
 
 root = tk.Tk() 
 
